@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <p v-text="name"></p>
+  <div>{{ name }}</div>
+
+  <div v-html="pop"></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data() {
+    return {
+      name: "inno",
+      pop: `<a href="#" onclick="alert('hello')">greet</a>`,
+  };
+},
+};
 </script>
 
 <style>
